@@ -10,16 +10,17 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     rollupOptions: {
-      output: {
-        // Separar el codi en chunks per carregar-lo millor
-        manualChunks(id) {
-            if (id.includes('src/modules/sensors.js')) {
-                return 'sensors';
-            }
-            if (id.includes('src/modules/camera.js')) {
-                return 'camera';
-            }
-        },
+        output: {
+            // Separar el codi en chunks per carregar-lo millor
+            manualChunks(id) {
+                if (id.includes('src/modules/sensors.js')) {
+                    return 'sensors';
+                }
+                if (id.includes('src/modules/camera.js')) {
+                    return 'camera';
+                }
+            },
+        }
     },
   },
 
