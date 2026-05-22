@@ -18,6 +18,12 @@ npm install -D vite-plugin-pwa @vitejs/plugin-basic-ssl
 
 # PAS 2: Executar el projecte
 
+## La primera vegada haureu d'instal·lar les dependencies
+
+```bash
+npm install
+```
+
 ## Mode desenvolupament (amb HMR)
 
 ```bash
