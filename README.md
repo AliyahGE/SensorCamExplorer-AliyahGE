@@ -73,7 +73,7 @@ netlify deploy --prod --dir dist
 ### Deploy a Vercel
 
 ```bash
-npm install -g vercel
+npm install vercel
 vercel --prod
 ```
 
