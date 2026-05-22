@@ -12,11 +12,14 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Separar el codi en chunks per carregar-lo millor
-        manualChunks: {
-          sensors: ['./src/modules/sensors.js'],
-          camera:  ['./src/modules/camera.js'],
+        manualChunks(id) {
+            if (id.includes('src/modules/sensors.js')) {
+                return 'sensors';
+            }
+            if (id.includes('src/modules/camera.js')) {
+                return 'camera';
+            }
         },
-      },
     },
   },
 
