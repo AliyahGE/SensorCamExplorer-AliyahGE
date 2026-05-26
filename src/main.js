@@ -1,61 +1,41 @@
-// ================================================
-//  MAIN - Entry point de Vite
-// ================================================
-
 import './style.css';
-import { initTabs }    from './modules/ui.js';
-import { initCamera }  from './modules/camera.js';
+import { initTabs } from './modules/ui.js';
+import { initCamera } from './modules/camera.js';
 import { initSensors } from './modules/sensors.js';
 import { initGallery } from './modules/gallery.js';
-import { showToast }   from './modules/ui.js';
+import { showToast } from './modules/ui.js';
 
-// -----------------------------------------------
-// SPLASH → APP
-// -----------------------------------------------
-function showApp() {
-  const splash = document.getElementById('splash');
-  const app    = document.getElementById('app');
+function obrirAplicacio() {
+  const pantallaInici = document.getElementById('splash');
+  const aplicacio = document.getElementById('app');
 
   setTimeout(() => {
-    splash?.classList.add('fade-out');
-    splash?.addEventListener('transitionend', () => {
-      splash.style.display = 'none';
+    pantallaInici?.classList.add('fade-out');
+    pantallaInici?.addEventListener('transitionend', () => {
+      pantallaInici.style.display = 'none';
     }, { once: true });
 
-    app?.classList.remove('hidden');
-    showToast('👋 Benvingut/da a SensorCam!', 'info');
-  }, 2000);
+    aplicacio?.classList.remove('hidden');
+    showToast('OnÉsElCotxe?', 'info');
+  }, 1800);
 }
 
-// -----------------------------------------------
-// INICIALITZAR MÒDULS
-// -----------------------------------------------
-function init() {
-  showApp();
-
-  // Tabs
-  initTabs((tabId) => {
-    console.log('[Nav] Tab actiu:', tabId);
+function iniciarAplicacio() {
+  obrirAplicacio();
+  initTabs((pestanyaActual) => {
+    console.log('Pestanya actual:', pestanyaActual);
   });
 
-  // Funcionalitats
   initCamera();
   initSensors();
   initGallery();
 
-  // Listener global: sacsejada → auto-foto si efecte shake actiu
   document.addEventListener('sensor:shake', () => {
-    // La lògica és al mòdul camera (ho gestiona internament)
-    // Aquí podries afegir feedback addicional si vols
   });
 
-  // Detectar si s'ha instal·lat com a PWA
   window.addEventListener('appinstalled', () => {
-    showToast('🎉 App instal·lada correctament!', 'success');
+    showToast('Aplicació instal·lada correctament', 'success');
   });
 }
 
-// -----------------------------------------------
-// START
-// -----------------------------------------------
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', iniciarAplicacio);
