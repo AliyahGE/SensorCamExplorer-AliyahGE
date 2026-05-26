@@ -101,3 +101,5 @@ Comunicació entre mòduls:
 |**ES Modules natius**|Codi modular sense bundler manual|
 |**Build optimitzat**|Tree-shaking + minificació automàtica|
 |**Workbox integrat**|Estratègies de caché avançades sense configuració|
+
+# SensorCamExplorer-AliyahGE
