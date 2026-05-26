@@ -42,9 +42,9 @@ export default defineConfig({
 
       // Configuració del manifest
       manifest: {
-        name:             'SensorCam Explorer',
-        short_name:       'SensorCam',
-        description:      'Càmera i sensors del mòbil en una PWA',
+        name:             'OnÉsElCotxe?',
+        short_name:       'OnÉsElCotxe',
+        description:      'App per recordar on he aparcat el cotxe',
         start_url:        '/',
         display:          'standalone',
         orientation:      'portrait',

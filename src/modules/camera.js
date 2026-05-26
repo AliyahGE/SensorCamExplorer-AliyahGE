@@ -35,7 +35,7 @@ export function initCamera() {
       effectOpts.forEach(o => o.classList.remove('active'));
       opt.classList.add('active');
       camState.effect = opt.dataset.effect;
-      showToast(`✨ Efecte: ${opt.textContent}`, 'info');
+      showToast(`​🤳🏻​ Efecte: ${opt.textContent}`, 'info');
     });
   });
 }
@@ -74,10 +74,10 @@ async function startCamera() {
 
     video.onloadedmetadata = () => startCanvasLoop();
 
-    showToast('📷 Càmera activada!', 'success');
+    showToast('​📸​ A treure fotos!', 'success');
   } catch (err) {
     console.error('[Camera]', err);
-    showToast('❌ No s\'ha pogut accedir a la càmera', 'error');
+    showToast('❌✋​No pots treure fotos!🤚​❌', 'error');
   }
 }
 
@@ -119,14 +119,14 @@ async function handleCapture() {
     },
   }));
 
-  showToast('✅ Foto feta!', 'success');
+  showToast('💃​Quin fotón!', 'success');
 }
 
 async function handleSwitchCamera() {
   camState.facing = camState.facing === 'environment' ? 'user' : 'environment';
   if (camState.active) await startCamera();
   showToast(
-    camState.facing === 'user' ? '🤳 Càmera frontal' : '📷 Càmera posterior',
+    camState.facing === 'user' ? '💁​ Càmera frontal' : '🧍‍♀️​ Càmera posterior',
     'info'
   );
 }

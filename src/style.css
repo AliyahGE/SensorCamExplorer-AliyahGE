@@ -6,14 +6,14 @@
   --bg-secondary:     #E8E8E8;
   --bg-card:          #ffffff;
   --bg-card-hover:    #f7d8f1;
-  --accent-primary:   #FCAEE9;
-  --accent-secondary: #FCAEE9;
+  --accent-primary:   #ff00bf;
+  --accent-secondary: #ff00bf;
   --accent-tertiary:  #000000;
   --accent-danger:    #000000;
   --accent-warning:   #FCAEE9;
   --text-primary:     #000000;
   --text-secondary:   #000000;
-  --text-muted:       #555555;
+  --text-muted:       #888888;
   --border-color:     rgba(0, 0, 0, 0.2);
   --shadow-glow:      0 0 12px rgba(252, 174, 233, 0.5);
   --radius-sm:        8px;
@@ -91,17 +91,17 @@ body::before {
 }
 
 .splash-content h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 2.5rem;
   font-weight: 900;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(145deg, var(--accent-primary), var(--accent-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .splash-content > p {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text-secondary);
   letter-spacing: 6px;
   text-transform: uppercase;
@@ -144,7 +144,7 @@ body::before {
 =================================== */
 .app-header {
   height: var(--header-h);
-  background: rgba(22, 33, 62, 0.95);
+  background: #FCAEE9;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
@@ -165,7 +165,7 @@ body::before {
 .app-icon { font-size: 24px; }
 
 .app-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'inter', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
@@ -239,7 +239,7 @@ body::before {
 .tab-nav {
   height: calc(var(--nav-h) + var(--safe-bottom));
   padding-bottom: var(--safe-bottom);
-  background: rgba(22, 33, 62, 0.95);
+  background: #FCAEE9;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-color);
@@ -623,7 +623,7 @@ body::before {
 .z-bar { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
 
 .axis-value {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   color: var(--text-secondary);
   width: 48px;
@@ -803,7 +803,7 @@ body::before {
 .orient-label { font-size: 0.72rem; color: var(--text-muted); }
 
 .orient-val {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   color: var(--accent-secondary);
   font-weight: 700;
@@ -867,12 +867,13 @@ body::before {
 }
 
 .gallery-header h2 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding: 10px;
 }
 
 .clear-btn {
@@ -1048,6 +1049,66 @@ body::before {
 }
 
 .toast.out { animation: toastOut 0.3s ease forwards; }
+
+.app-main {
+  background: #E8E8E8;
+  padding: 18px;
+}
+
+.tab-content.active {
+  display: grid;
+  gap: 18px;
+}
+
+.sensor-card,
+.camera-container,
+.gallery-wrapper,
+.sensors-wrapper {
+  background: white;
+  border: 2px solid #000000;
+  border-radius: 22px;
+  box-shadow: 6px 6px 0 #FCAEE9;
+}
+
+.app-header {
+  background: #FCAEE9;
+  border-bottom: 2px solid #000000;
+}
+
+.tab-nav {
+  background: white;
+  border-top: 2px solid #000000;
+}
+
+.tab-btn.active {
+  color: #000000;
+  background: #FCAEE9;
+}
+
+.activate-btn,
+.ctrl-btn.secondary,
+.clear-btn {
+  background: #FCAEE9;
+  color: #000000;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+}
+
+.activate-btn:active,
+.ctrl-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.camera-container {
+  aspect-ratio: 1 / 1;
+  max-height: none;
+}
+
+.gallery-grid {
+  grid-template-columns: 1fr;
+}
+
 
 /* ===================================
    KEYFRAMES

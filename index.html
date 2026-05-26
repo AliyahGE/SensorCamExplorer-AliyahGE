@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <meta name="theme-color" content="#0f0f1a"/>
-  <meta name="description" content="SensorCam Explorer - Càmera i sensors"/>
+  <meta name="description" content="OnÉsElCotxe? - Càmera i sensors"/>
   <meta name="mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-  <meta name="apple-mobile-web-app-title" content="SensorCam"/>
+  <meta name="apple-mobile-web-app-title" content="OnÉsElCotxe?"/>
 
   <!-- Apple Touch Icons -->
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"/>
@@ -21,7 +21,7 @@
     rel="stylesheet"
   />
 
-  <title>SensorCam Explorer</title>
+  <title>OnÉsElCotxe?</title>
 </head>
 <body>
 
@@ -29,7 +29,7 @@
   <div id="splash">
     <div class="splash-content">
       <div class="logo-icon">📡</div>
-      <h1>SensorCam</h1>
+      <h1>OnÉsElCotxe?</h1>
       <p>Explorer</p>
       <div class="loader-bar">
         <div class="loader-fill"></div>
@@ -43,13 +43,13 @@
     <!-- HEADER -->
     <header class="app-header">
       <div class="header-left">
-        <span class="app-icon">📡</span>
-        <span class="app-title">SensorCam</span>
+        <span class="app-icon">​🚘​</span>
+        <span class="app-title">OnÉsElCotxe?</span>
       </div>
       <div class="header-right">
         <div id="sensor-status" class="status-badge offline">
           <span class="status-dot"></span>
-          <span class="status-text">Sensors</span>
+          <span class="status-text">Captadors</span>
         </div>
       </div>
     </header>
@@ -85,9 +85,9 @@
             <div class="flash-overlay" id="flashOverlay"></div>
 
             <div class="no-camera" id="noCamera">
-              <span>📷</span>
-              <p>Activa la càmera</p>
-              <small>Clica el botó per començar</small>
+              <span>🎬​</span>
+              <p>Has de activar la càmera per treure fotos!</p>
+              <small>Fes click aquí</small>
             </div>
           </div>
 
@@ -98,14 +98,14 @@
                 <div class="capture-circle"></div>
               </div>
             </button>
-            <button class="ctrl-btn secondary" id="effectBtn"    title="Efectes">✨</button>
+            <button class="ctrl-btn secondary" id="effectBtn"    title="Efectes">🤳🏻​</button>
           </div>
 
           <div class="effect-selector" id="effectSelector">
-            <button class="effect-opt active" data-effect="normal">Normal</button>
-            <button class="effect-opt" data-effect="tilt-blur">Tilt</button>
-            <button class="effect-opt" data-effect="shake">Shake</button>
-            <button class="effect-opt" data-effect="neon">Neon</button>
+            <button class="effect-opt active" data-effect="normal">Predeterminat</button>
+            <button class="effect-opt" data-effect="tilt-blur">Inclinat</button>
+            <button class="effect-opt" data-effect="shake">Bellugat</button>
+            <button class="effect-opt" data-effect="neon">De festa!</button>
           </div>
         </div>
       </section>
@@ -116,9 +116,9 @@
 
           <div class="sensor-card">
             <div class="card-header">
-              <span class="card-icon">⚡</span>
+              <span class="card-icon">📏​</span>
               <div>
-                <h3>Acceleròmetre</h3>
+                <h3>Mesura del moviment</h3>
                 <small>Moviment en 3 eixos</small>
               </div>
               <div class="card-badge" id="accelBadge">OFF</div>
@@ -159,7 +159,7 @@
             </div>
 
             <div class="intensity-display">
-              <span class="intensity-label">Intensitat</span>
+              <span class="intensity-label">Magnitud</span>
               <div class="intensity-ring">
                 <svg viewBox="0 0 100 100" class="intensity-svg">
                   <defs>
@@ -181,7 +181,7 @@
               <span class="card-icon">🧭</span>
               <div>
                 <h3>Orientació</h3>
-                <small>Inclinació del dispositiu</small>
+                <small>Direcció del dispositiu</small>
               </div>
               <div class="card-badge" id="gyroBadge">OFF</div>
             </div>
@@ -216,11 +216,11 @@
           </div>
 
           <button class="activate-btn" id="activateBtn">
-            <span class="btn-icon">🚀</span> Activar Sensors
+            <span class="btn-icon">🎛️</span> Iniciar els sensors
           </button>
 
           <div class="shake-alert hidden" id="shakeAlert">
-            <span>💥</span> Sacsejada detectada!
+            <span>💃​</span> Quina bellugada noi!
           </div>
 
         </div>
@@ -230,14 +230,14 @@
       <section id="tab-gallery" class="tab-content">
         <div class="gallery-wrapper">
           <div class="gallery-header">
-            <h2>Les meves fotos</h2>
-            <button class="clear-btn" id="clearGallery">🗑️ Netejar</button>
+            <h2>Galeria</h2>
+            <button class="clear-btn" id="clearGallery">Buidar Galeria</button>
           </div>
           <div class="gallery-grid" id="galleryGrid">
             <div class="gallery-empty" id="galleryEmpty">
-              <span>📭</span>
-              <p>Encara no hi ha fotos</p>
-              <small>Fes una foto amb la càmera!</small>
+              <span>🎞️​</span>
+              <p>No tens fotos a la galeria.</p>
+              <small>Fes fotos!!!</small>
             </div>
           </div>
         </div>
@@ -252,12 +252,12 @@
         <span>Càmera</span>
       </button>
       <button class="tab-btn" data-tab="sensors">
-        <span class="tab-icon">🔮</span>
-        <span>Sensors</span>
+        <span class="tab-icon">🎛️​</span>
+        <span>Captadors</span>
       </button>
       <button class="tab-btn" data-tab="gallery">
         <span class="tab-icon">🖼️</span>
-        <span>Galeria</span>
+        <span>Fotos</span>
       </button>
     </nav>
 
@@ -270,8 +270,8 @@
       <img id="modalImage" src="" alt="Foto capturada"/>
       <div class="modal-info" id="modalInfo"></div>
       <div class="modal-actions">
-        <button class="modal-btn download" id="downloadBtn">⬇️ Descarregar</button>
-        <button class="modal-btn close"    id="closeModal">✕ Tancar</button>
+        <button class="modal-btn download" id="downloadBtn">🔻​ Descarregar</button>
+        <button class="modal-btn close"    id="closeModal">✖️​ Tanca</button>
       </div>
     </div>
   </div>

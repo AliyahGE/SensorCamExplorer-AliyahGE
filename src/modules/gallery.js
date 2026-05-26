@@ -64,7 +64,7 @@ function addPhoto(photoData) {
 // -----------------------------------------------
 function clearGallery() {
   if (photos.length === 0) {
-    showToast('📭 Ja no hi ha fotos', 'info');
+    showToast('Totes les fotos han sigut esborrades', 'info');
     return;
   }
 
@@ -78,7 +78,7 @@ function clearGallery() {
   [...grid.querySelectorAll('.gallery-item')].forEach(el => el.remove());
   empty?.classList.remove('hidden');
 
-  showToast('🗑️ Galeria neta', 'info');
+  showToast('Galeria buida', 'info');
 }
 
 // -----------------------------------------------
@@ -99,9 +99,9 @@ function openModal(photo) {
   ).toFixed(1);
 
   info.innerHTML = `
-    <strong>📅</strong> ${photo.timestamp} &nbsp;|&nbsp;
-    <strong>✨</strong> ${photo.effect} &nbsp;|&nbsp;
-    <strong>⚡</strong> ${magnitude} G
+    <strong>'🗓️​​'</strong> ${photo.timestamp} &nbsp;|&nbsp;
+    <strong>​🤳🏻​</strong> ${photo.effect} &nbsp;|&nbsp;
+    <strong>'🎛️​'</strong> ${magnitude} G
   `;
 
   modal.classList.remove('hidden');
@@ -120,7 +120,7 @@ function downloadPhoto() {
   a.href       = currentPhoto.dataUrl;
   a.download   = `sensorCam_${currentPhoto.id}.jpg`;
   a.click();
-  showToast('⬇️ Foto descarregada!', 'success');
+  showToast('Foto descarregada', 'success');
 }
 
 // -----------------------------------------------

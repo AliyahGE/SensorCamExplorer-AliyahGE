@@ -40,11 +40,11 @@ async function activate() {
     try {
       const perm = await DeviceMotionEvent.requestPermission();
       if (perm !== 'granted') {
-        showToast('🚫 Permís denegat pels sensors', 'error');
+        showToast('🙅​ No pots fer servir els sensors', 'error');
         return;
       }
     } catch {
-      showToast('❌ Error demanant permisos', 'error');
+      showToast('🤷​ Ha pasat alguna cosa demanant permisos', 'error');
       return;
     }
   }
@@ -54,7 +54,7 @@ async function activate() {
 
   sensorState.active = true;
   updateUI(true);
-  showToast('⚡ Sensors activats!', 'success');
+  showToast('🤙​Sensors activats!', 'success');
 }
 
 function deactivate() {
@@ -63,7 +63,7 @@ function deactivate() {
 
   sensorState.active = false;
   updateUI(false);
-  showToast('⏸️ Sensors desactivats', 'info');
+  showToast('🤏Sensors desactivats', 'info');
 }
 
 // -----------------------------------------------
@@ -179,7 +179,7 @@ function detectShake() {
     sensorState.lastShakeTime = now;
 
     showShakeAlert();
-    showToast('💥 Sacsejada detectada!', 'warning');
+    showToast('🕺​ Quina bellugada noi!', 'warning');
 
     // Event per si la càmera vol reaccionar
     document.dispatchEvent(new CustomEvent('sensor:shake', {
@@ -205,7 +205,7 @@ function updateUI(active) {
   // Botó
   const btn = document.getElementById('activateBtn');
   if (btn) {
-    btn.innerHTML = `<span class="btn-icon">${active ? '⏹️' : '🚀'}</span>${active ? ' Desactivar Sensors' : ' Activar Sensors'}`;
+    btn.innerHTML = `<span class="btn-icon">${active ? '🙌​' : '🤸‍♀️'}</span>${active ? ' Desactivar Sensors' : ' Activar Sensors'}`;
     btn.classList.toggle('active', active);
   }
 

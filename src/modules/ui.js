@@ -12,9 +12,9 @@ export function showToast(message, type = 'info') {
   if (!container) return;
 
   const icons = {
-    success: '✅',
+    success: '✔️​',
     error:   '❌',
-    info:    'ℹ️',
+    info:    '📃​',
     warning: '⚠️',
   };
 
